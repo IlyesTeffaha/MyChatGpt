@@ -99,7 +99,7 @@ const handleSubmit = async (e) =>{
  // fetch bot response
 
  
- const response = await fetch('https://ilyesgpt.onrender.com/', {
+ const response = await fetch('http://localhost:5000/', {
   method: 'POST',
   headers: {
       'Content-Type': 'application/json',
