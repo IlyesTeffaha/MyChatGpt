@@ -99,7 +99,7 @@ const handleSubmit = async (e) =>{
  // fetch bot response
 
  
- const response = await fetch('https://ilyes-gpt.onrender.com/', {
+ const response = await fetch('https://ilyes-gpt.onrender.com', {
   method: 'POST',
   headers: {
       'Content-Type': 'application/json',
@@ -114,7 +114,8 @@ messageDiv.innerHTML = " "
 
 if (response.ok) {
   const data = await response.json();
-  const parsedData = data.bot.trim() // trims any trailing spaces/'\n' 
+  console.log(data)
+  const parsedData = data.bot.trim();
 
   typeText(messageDiv, parsedData)
 } else {
