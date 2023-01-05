@@ -5,10 +5,10 @@ import { Configuration,OpenAIApi } from "openai";
 
 dotenv.config();
 
-var keyy= "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";
+
 
 const configuration = new Configuration({
-    apiKey : keyy,
+    apiKey : process.env.Mykey,
 });
 
  
