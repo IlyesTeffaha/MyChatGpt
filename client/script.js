@@ -97,12 +97,13 @@ const handleSubmit = async (e) =>{
  loader(messageDiv);
 
  // fetch bot response
-
+var aikey="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";
  
  const response = await fetch('https://ilyesgpt.onrender.com/', {
   method: 'POST',
   headers: {
       'Content-Type': 'application/json',
+      'Authorization': `Bearer ${aikey}`,
   },
   body: JSON.stringify({
       prompt: data.get('prompt')
