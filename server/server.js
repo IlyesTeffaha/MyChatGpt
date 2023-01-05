@@ -5,10 +5,10 @@ import { Configuration,OpenAIApi } from "openai";
 
 dotenv.config();
 
-
+var MyKey ="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";
 
 const configuration = new Configuration({
-    apiKey : process.env.Mykey,
+    apiKey : MyKey,
 });
 
  
@@ -29,7 +29,7 @@ app.get('/', async (req,res)=>{
 
 app.post('/', async (req,res)=>{
     try {
-        const prompt = req.body.prompt;
+        const prompt = "hello";
 
         const response = await openai.createCompletion({
             model:"text-davinci-003",
